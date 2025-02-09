@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  # API routes
+  namespace :api do
+    namespace :v1 do
+      # Example endpoint
+      get "example", to: "example#index"
+
+      # Add your API endpoints here, for example:
+      # resources :posts
+    end
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
