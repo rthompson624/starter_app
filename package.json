@@ -21,8 +21,6 @@
     "postinstall": "echo 'Please use Yarn instead of npm to maintain consistency with production environment'"
   },
   "dependencies": {
-    "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
