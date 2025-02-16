@@ -19,9 +19,9 @@ gem "jbuilder"
 
 # Authentication
 gem "devise"
-gem "devise-jwt"
 gem "rack-cors"
 gem "jsonapi-serializer"
+gem "jwt"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
