@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   # API routes
   namespace :api do
     namespace :v1 do
-      # Example endpoint
-      get "example", to: "example#index"
-
-      # Add your API endpoints here, for example:
-      # resources :posts
+      post "signup", to: "registrations#create"
+      post "login", to: "sessions#create"
+      delete "logout", to: "sessions#destroy"
     end
   end
 
