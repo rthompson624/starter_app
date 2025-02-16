@@ -6,11 +6,12 @@
     "yarn": "1.22.22"
   },
   "devDependencies": {
+    "@types/node": "^22.13.4",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "esbuild": "^0.25.0",
-    "typescript": "^5.4.2",
-    "esbuild-serve": "^1.0.1"
+    "esbuild-serve": "^1.0.1",
+    "typescript": "^5.4.2"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",

@@ -2,6 +2,10 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
 
+// Disable Turbo since we're using React
+import { Turbo } from '@hotwired/turbo-rails';
+Turbo.session.drive = false;
+
 // Setup HMR
 if (process.env.NODE_ENV === 'development') {
   const eventSource = new EventSource('http://localhost:8082/esbuild');
