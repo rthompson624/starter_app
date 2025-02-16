@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface User {
   id: number;
@@ -30,13 +30,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const removeToken = () => localStorage.removeItem('auth_token');
 
   // Helper function to get auth headers
-  const getAuthHeaders = useCallback(() => {
+  const getAuthHeaders = () => {
     const token = getToken();
     return {
       'Content-Type': 'application/json',
       ...(token ? { 'Authorization': `Bearer ${token}` } : {})
     };
-  }, []);
+  };
 
   useEffect(() => {
     const validateToken = async () => {
@@ -63,7 +63,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     validateToken();
-  }, [getAuthHeaders]);
+  }, []);
 
   const signIn = async (email: string, password: string) => {
     try {
